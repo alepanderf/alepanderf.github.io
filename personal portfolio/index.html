@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial=scale=1.0">
+    <title>Personal Portfolio Wesbite</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+<div id="header">
+    <div class = "container">
+        <nav>
+            <img src="" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Aspiring Software Engineer</p>
+            <h1 id="typewriterText">Hi, I'm <span>Alejandro</span><br>from Rutgers University</h1>
+        </div>
+    </div>
+</div> 
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class = "sub-title">About Me</h1>
+                <p>My name is Alejandro Freire and I am a Computer Science Major at Rutgers University with a newly found passion 
+                    for writing clean and effective code. Given how technology-dependent society is, 
+                    it's more important than ever to have motivated and curious professionals behind 
+                    the programs we use on a daily basis. Having switched major from Information Technology,
+                    I bring to the table an appreciation for ethical programming and high security measures.
+                    I am currently learning Javascript and C however, outside of the classroom,
+                    I can be found running, training to do a muscle-up, and playing the same four year old
+                    Call of Duty game.</p>
+
+                    <div class="tab-titles">
+                        <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class = "tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class = "tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Java</span><br></li>
+                            <li><span>Python</span><br></li>
+                            <li><span>C</span><br></li>
+                            <li><span>SQL</span><br></li>
+                            <li><span>Node.js</span><br></li>
+                            <li><span>React</span><br></li>
+                            <li><span>Git</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>October 2023 - Current</span><br>Software Engineering Fellow at Blueprint</li>
+                            <li><span>October 2023</span><br>Hacker at Rutgers HackRU</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - 2026</span><br>BA in Computer Science from Rutgers University</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
